@@ -41,3 +41,15 @@ encrypted_message = encrypted_file.readline()
 encrypted_file.close()
 
 # Write code below
+
+reverse_cipher = {}
+
+for key in cipher:
+    reverse_cipher[cipher[key]] = key
+
+decrypted_message = ""
+
+for letter in encrypted_message:
+    decrypted_message += reverse_cipher[letter]
+
+print(decrypted_message)
